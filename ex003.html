@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let valor1 = [];
+        valor1.push(parseInt(prompt(`COLOQUE UM VALOR 1`)));
+        valor1.push(parseInt(prompt(`COLOQUE UM VALOR 2`)));
+        if (valor1[1] <= 0) {
+            valor1[1] = (prompt(parseInt(`Valor menor ou igual a zero coloca um valor maior que 0`)));
+        }
+        window.alert(`valor da divisão${valor1[0] / valor1[1]}`)
+        window.alert(`bomba relógio iniciada`);
+
+        const tnt = ()=>{
+            clearInterval(interval)
+            document.write("<h2>EXPLOSÃO</h2>")
+        }
+        const interval = setInterval(tnt, 3000)
+
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        window.alert(`Números de 1 a 10 ${numbers}\n decresente: ${numbers.reverse()} `)
+
+
+        const calcularMediaAritmetica = () => {
+            const inicio = 15, fim = 100;
+            return ((inicio + fim) * (fim - inicio + 1)) / (2 * (fim - inicio + 1));
+        };
+
+        // Chama a função e exibe a média
+        const mediaa = calcularMediaAritmetica();
+        window.alert(`A média aritmética dos números inteiros entre 15 e 100 é: ${mediaa}`);
+
+
+        const inicio = parseInt(prompt("Informe o primeiro número (menor):"));
+        const fim = parseInt(prompt("Informe o segundo número (maior):"));
+
+        const quantidadeNumeros = fim - inicio + 1;
+        const soma = ((inicio + fim) * quantidadeNumeros) / 2;
+        const mediaAritmetica = soma / quantidadeNumeros;
+
+        window.alert(`A média aritmética dos números inteiros entre ${inicio} e ${fim} é: ${mediaAritmetica}`);
+
+        // 6 - exercico
+        // Lê as notas do aluno
+        const nota11 = parseFloat(prompt("Informe a primeira nota:"));
+        const nota22 = parseFloat(prompt("Informe a segunda nota:"));
+
+        // Verifica se o aluno foi aprovado
+        window.alert(`Média: ${((nota11 + nota22) / 2) >= 9.5 ? "Aluno aprovado!" : "Aluno reprovado."} `);
+
+        // 7 - exercico
+        const lerNotaValida = (numeroNota) => {
+            let nota;
+            do {
+                nota = parseFloat(prompt(`Informe a nota ${numeroNota} (0 a 10):`));
+            } while (isNaN(nota) || nota < 0 || nota > 10);
+            return nota;
+        };
+
+        const nota1 = lerNotaValida(1);
+        const nota2 = lerNotaValida(2);
+        const nota3 = lerNotaValida(3);
+        const nota4 = lerNotaValida(4);
+        const nota5 = lerNotaValida(5);
+        const nota6 = lerNotaValida(6);
+
+        const media = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6) / 6;
+        window.alert(`Média: ${media >= 9.5 ? "Aluno aprovado!" : "Aluno reprovado."}`);
+
+        //8 - Exercicio
+        const imprimirValoresInteiros = (N) => {
+            let arrayExample = [];
+            for (let i = 1; i <= N; i++) arrayExample.push(i);
+            return arrayExample
+        };
+
+        const Nu = parseInt(prompt("Informe o valor de N:"));
+        window.alert(`Esses são os números ${imprimirValoresInteiros(Nu)}`);
+
+        // 9 - Exercio
+        let valoresToExercicio9 = [];
+        for (let i = 101; i <= 110; i++) valoresToExercicio9.push(i)
+        window.alert(`10 primeiros números inteieros maiores que 100: ${valoresToExercicio9}`);
+
+        
+
+    </script>
+</body>
+
+</html>
